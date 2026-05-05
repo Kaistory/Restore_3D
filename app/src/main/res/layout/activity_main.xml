@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║   LED Ring BLE Controller — activity_main.xml               ║
+    ║   ESP32-C3 · 40 LEDs · NUS BLE Protocol (idx,R,G,B,bright) ║
+    ╚══════════════════════════════════════════════════════════════╝
+
+    BLE Protocol (from BLE-40LED.ino):
+      TX  → "idx,R,G,B,bright"  (e.g. "0,255,0,0,128")
+      RX  ← [status_byte, led_index]  (0x00=OK, 0x01=bad idx, 0x02=bad format)
+
+    LED Layout:
+      Outer ring : LED index 0–23  (24 LEDs)
+      Inner ring : LED index 24–39 (16 LEDs)
+-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
